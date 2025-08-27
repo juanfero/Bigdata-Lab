@@ -56,7 +56,11 @@ jobs:
         run: aws s3 ls
         
       - name: Upload to S3
-        run: |
-          aws s3 cp utils.py s3://pipesbucket1212/
+        run: aws s3 cp src/utils.py s3://pipesbucket1212/
+        
+      - name: List files
+        run: ls -R
+
+
         
         
